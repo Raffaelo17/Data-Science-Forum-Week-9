@@ -2,43 +2,38 @@
 
 ### K-Means Clustering:
 
-K-Means is a partitioning method that divides the dataset into K clusters, where each data point belongs to the cluster with the nearest mean. It minimizes the sum of squared distances between data points and their assigned cluster centroids.</br></br>
-Pros:
-Efficient and scalable for large datasets.
-Works well when clusters are spherical and equally sized.</br>
-Cons:
-Sensitive to the initial choice of centroids.
-Assumes clusters are spherical and equally sized, which might not be the case in some datasets.</br></br>
+By minimizing the sum of squared distances between data points and their designated cluster centroids, K-Means clustering divides a dataset into K clusters. Each data point is assigned to the cluster with the nearest mean.</br></br>
+scalable and effective for big datasets.
+functions best in spherically shaped, uniformly sized clusters.</br>
+
+Sensitive to the centroids' original selection. Assumes equal sizing and sphericity of clusters, which may not be the case for all datasets.</br></br>
+
 
 ### Hierarchical Clustering:
 
-Hierarchical clustering builds a tree of clusters by recursively merging or splitting them. It results in a hierarchy of clusters, represented as a dendrogram. The number of clusters can be chosen by cutting the dendrogram at a certain height.</br></br>
-Pros:
-Reveals hierarchical structure in the data.
-No need to specify the number of clusters beforehand.</br>
-Cons:
-Computationally more expensive, especially for large datasets.
-Interpretation can be subjective.</br></br>
+By repeatedly joining or dividing clusters, hierarchical clustering creates a tree of clusters. A dendrogram, which is a hierarchy of clusters, is the end product. The dendrogram can be clipped at a specific height to determine the number of clusters.<br><br>
+Advantages: Shows the data's hierarchical structure.
+There's no need to predetermine the number of clusters.</br>
+Cons: Costlier to compute, particularly for big datasets.
+Subjective interpretation is possible.<br><br>
 
 ### DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
 
-DBSCAN is a density-based clustering algorithm that groups together data points that are close to each other and have a sufficient number of neighbors, while marking outliers as noise. It doesn't require specifying the number of clusters.</br>
-Pros:Can discover clusters of arbitrary shapes.
-Robust to noise and outliers.</br>
-Cons:
-Sensitive to the choice of distance metric and hyperparameters.
-Performance may degrade in high-dimensional spaces.</br></br>
+DBSCAN is a density-based clustering technique that classifies outliers as noise and clusters together data points that are sufficiently close to one another and have enough neighbors. The number of clusters need not be specified.</br>
+Advantages: Capable of finding groups of any shape.
+robust against anomalies and noise.</br>
+Cons: Dependent on the hyperparameters and distance metric selected.
+High-dimensional spaces may result in a decline in performance.</br></br>
 
 ### Gaussian Mixture Model (GMM):
 
-GMM is a probabilistic model that represents a mixture of Gaussian distributions. It assumes that the data points are generated from a mixture of several Gaussian distributions and uses the Expectation-Maximization (EM) algorithm to estimate the parameters.</br>
-Pros:
-Can model clusters with different shapes and sizes.
-Provides soft assignments, i.e., the probability of each point belonging to each cluster.</br>
-Cons:
-Sensitive to the choice of initial parameters.
-Computationally more expensive than K-Means.</br></br>
+A combination of Gaussian distributions is represented by the probabilistic model known as the GMM. It use the Expectation-Maximization (EM) algorithm to estimate the parameters and makes the assumption that the data points are produced from a combination of multiple Gaussian distributions.</br>
+Advantages: Capable of simulating clusters of various sizes and shapes.
+gives soft assignments, or the likelihood that every point belongs to every cluster.</br>
+Cons: Dependent on the initial parameter selection.
+more computationally costly than K-Means.</br></br>
 
-<h2 align="center">Scores and Evaluation</h2>
-The following table displays the evaluation metrics for different clustering methods applied to the dataset:
+<h2 align="center">Results and Assessment</h2>
+The evaluation metrics for the various clustering techniques used on the dataset are shown in the following table:
+
 </br></br>
