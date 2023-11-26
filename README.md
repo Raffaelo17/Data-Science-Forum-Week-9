@@ -1,25 +1,44 @@
-Data Science Forum Week 9 
+<h1 align="center">DS Forum Week 9: Clustering Methods</h1>
 
+### K-Means Clustering:
 
-Unsupervised Machine Learning Algorithms and Evaluation
+K-Means is a partitioning method that divides the dataset into K clusters, where each data point belongs to the cluster with the nearest mean. It minimizes the sum of squared distances between data points and their assigned cluster centroids.</br></br>
+Pros:
+Efficient and scalable for large datasets.
+Works well when clusters are spherical and equally sized.</br>
+Cons:
+Sensitive to the initial choice of centroids.
+Assumes clusters are spherical and equally sized, which might not be the case in some datasets.</br></br>
 
+### Hierarchical Clustering:
 
-Clustering algorithms are essential tools in data analysis, as they help identify patterns and groups within datasets. Three common clustering algorithms are K-Means, Hierarchical Clustering, and DBSCAN. Each of these algorithms has its own advantages and disadvantages, which make them suitable for different tasks and datasets.
-K-Means Clustering:
+Hierarchical clustering builds a tree of clusters by recursively merging or splitting them. It results in a hierarchy of clusters, represented as a dendrogram. The number of clusters can be chosen by cutting the dendrogram at a certain height.</br></br>
+Pros:
+Reveals hierarchical structure in the data.
+No need to specify the number of clusters beforehand.</br>
+Cons:
+Computationally more expensive, especially for large datasets.
+Interpretation can be subjective.</br></br>
 
-Pros: Efficient and scalable for large datasets, no need to specify the number of clusters.
-Cons: Sensitive to the initial choice of centroids, assumes clusters are spherical and equally sized.
+### DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
 
-Hierarchical Clustering:
+DBSCAN is a density-based clustering algorithm that groups together data points that are close to each other and have a sufficient number of neighbors, while marking outliers as noise. It doesn't require specifying the number of clusters.</br>
+Pros:Can discover clusters of arbitrary shapes.
+Robust to noise and outliers.</br>
+Cons:
+Sensitive to the choice of distance metric and hyperparameters.
+Performance may degrade in high-dimensional spaces.</br></br>
 
-Pros: Reveals hierarchical structure in the data, no need to specify the number of clusters beforehand.
-Cons: Computationally more expensive, especially for large datasets, interpretation can be subjective.
+### Gaussian Mixture Model (GMM):
 
-DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
+GMM is a probabilistic model that represents a mixture of Gaussian distributions. It assumes that the data points are generated from a mixture of several Gaussian distributions and uses the Expectation-Maximization (EM) algorithm to estimate the parameters.</br>
+Pros:
+Can model clusters with different shapes and sizes.
+Provides soft assignments, i.e., the probability of each point belonging to each cluster.</br>
+Cons:
+Sensitive to the choice of initial parameters.
+Computationally more expensive than K-Means.</br></br>
 
-Pros: Can discover clusters of arbitrary shapes, robust to noise and outliers.
-Cons: Sensitive to the choice of distance metric and hyperparameters, performance may degrade in high-dimensional spaces.
-Gaussian Mixture Model (GMM):
-Pros: Can model clusters with different shapes and sizes, provides soft assignments.
-Cons: Sensitive to the choice of initial parameters, computationally more expensive than K-Means.
-Selecting the appropriate clustering algorithm depends on the specific requirements of the task and the characteristics of the dataset. K-Means is a good choice for datasets with known cluster sizes and spherical shapes, while Hierarchical Clustering is more suitable for datasets with hierarchical structures. DBSCAN is a flexible option for datasets with arbitrary cluster shapes, and GMM is useful for datasets with clusters of different sizes and Gaussian distributions.
+<h2 align="center">Scores and Evaluation</h2>
+The following table displays the evaluation metrics for different clustering methods applied to the dataset:
+</br></br>
