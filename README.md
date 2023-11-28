@@ -8,26 +8,38 @@ functions best in spherically shaped, uniformly sized clusters.</br>
 
 Sensitive to the centroids' original selection. Assumes equal sizing and sphericity of clusters, which may not be the case for all datasets.</br></br>
 
+Results:
+Silhouette Score: 0.1264364314825275
+Davies-Bouldin Index: 2.445935417058955
+Rand Score: 0.2216930048692321
+Calinski and Harabasz Score: 221.11727444263212
+### Means Shift Clustering:
 
-### Hierarchical Clustering:
-
-By repeatedly joining or dividing clusters, hierarchical clustering creates a tree of clusters. A dendrogram, which is a hierarchy of clusters, is the end product. The dendrogram can be clipped at a specific height to determine the number of clusters.<br><br>
+Seeks to identify "blobs" within a sample density that is smooth. This approach, which is based on centroid selection, updates potential centroids to be the average of the points in a certain area.<br><br>
 Advantages: Shows the data's hierarchical structure.
 There's no need to predetermine the number of clusters.</br>
 Cons: Costlier to compute, particularly for big datasets.
 Subjective interpretation is possible.<br><br>
 
-### DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
+Results:
 
-DBSCAN is a density-based clustering technique that classifies outliers as noise and clusters together data points that are sufficiently close to one another and have enough neighbors. The number of clusters need not be specified.</br>
+### Agglomerative Clustering:
+
+The most popular kind of hierarchical clustering, which organizes things according to how similar they are. Another name for it is Agglomerative Nesting, or AGNES. Every object is first viewed by the algorithm as a singleton cluster. Subsequently, clusters are combined in pairs until all clusters are combined into a single large cluster that contains all of the objects. The ultimate product is a dendrogram, which is an object representation based on a tree.</br>
 Advantages: Capable of finding groups of any shape.
 robust against anomalies and noise.</br>
 Cons: Dependent on the hyperparameters and distance metric selected.
 High-dimensional spaces may result in a decline in performance.</br></br>
 
-### Gaussian Mixture Model (GMM):
+Results:
+Silhouette Score: 0.11077086341414898
+Davies-Bouldin Index: 2.7497403469949773
+Rand Score: 0.2981967298269896
+Calinski and Harabasz Score: 193.63464529209537
 
-A combination of Gaussian distributions is represented by the probabilistic model known as the GMM. It use the Expectation-Maximization (EM) algorithm to estimate the parameters and makes the assumption that the data points are produced from a combination of multiple Gaussian distributions.</br>
+### Spectral Clustering:
+
+Use the data's similarity matrix's spectrum, or eigenvalues, to reduce the number of dimensions before clustering the data into smaller groups. A quantitative evaluation of the relative similarity between every pair of points in the dataset makes up the similarity matrix, which is supplied as an input.</br>
 Advantages: Capable of simulating clusters of various sizes and shapes.
 gives soft assignments, or the likelihood that every point belongs to every cluster.</br>
 Cons: Dependent on the initial parameter selection.
@@ -37,3 +49,9 @@ more computationally costly than K-Means.</br></br>
 The evaluation metrics for the various clustering techniques used on the dataset are shown in the following table:
 
 </br></br>
+
+Results:
+Silhouette Score: 0.012947828868357035
+Davies-Bouldin Index: 0.8701680179286883
+Rand Score: 5.189135899521916e-07
+Calinski and Harabasz Score: 1.3133090439623518
